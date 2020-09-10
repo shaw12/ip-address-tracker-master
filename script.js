@@ -8,13 +8,13 @@ var newLocation = document.getElementById('new-location');
 var newZone = document.getElementById('new-zone');
 var newIsp = document.getElementById('new-isp');
 
-mymap.setView([latit, longit], 18);
+mymap.setView([latit, longit], 13);
 var setMap = () => {
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2hhdzEyIiwiYSI6ImNrZXR4bDhmbDBqYmUzNGxoa2I3M2hmdDMifQ.b-m-i1U8b4MWy5WUCegzSQ', {
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     tileSize: 512,
-    zoomOffset: -3,
+    zoomOffset: -1
  }).addTo(mymap);
   L.marker([latit, longit]).addTo(mymap)
 }
